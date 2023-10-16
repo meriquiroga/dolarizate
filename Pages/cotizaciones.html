@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Assets/favicon.ico"></link>
+    <link rel="stylesheet" href="/style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Dolarizate</title>
+</head>
+<body>
+    <header>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <img src="/Assets/logo.png" width="16%" height="16%"/>
+            <div style="float: right;">
+                <div style="float: left;"><p>Quiénes somos</p></div>
+                <div style="float: left;"><p>Cotizaciones</p></div>
+                <div style="float: left;"><p>Ayuda</p></div>
+                <div style="float: left; background-color: #A9CC39 ;  border-radius: 25px"><p style="background-color: #A9CC39; color: white">Iniciar sesión</p></div>
+                <div style="float: left; background-color: #A9CC39 ;  border-radius: 25px;"><p style="background-color: #A9CC39; color: white">Crear cuenta</p></div>
+            </div>
+        </div>
+        
+        <!-- Tabla de Cotizaciones -->
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h2 class="subtitulo text-center">Cotización</h2>
+                    <table id="table" class="table table-responsive">
+                        <tbody id="cotizacion">
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Compra</th>
+                                <th>Venta</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="/Scripts/obtenerDolar.js" type="module"></script>
+
+</body>
+</html>
