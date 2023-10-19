@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión</title>
+<!--logotipo-->
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.ico">
+<!--fin del logo-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .half {
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-half {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .image-half {
+            background: url(/Assets/image.png) no-repeat center center;
+            background-size: 50%;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="half form-half">
+            <form id="loginForm" onsubmit="return validarFormulario()">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="usuario" placeholder="Usuario" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+                <p class="error-message" id="errorMessage"></p>
+
+ <!--Falta crear paginna para recuperar la contrasela-->
+                <p class="forgot-password"><a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a></p>
+
+            </form>
+        </div>
+        <div class="half image-half"></div>
+    </div>
+
+    <script>
+        function validarFormulario() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+            var errorMessage = document.getElementById("errorMessage");
+
+            // Validación de usuario y contraseña 
+            if (usuario === "usuario" && contrasena === "contrasena") {
+                errorMessage.textContent = ""; // Limpia el mensaje de error
+                return true; // Envía el formulario
+            } else {
+                errorMessage.textContent = "Usuario o contraseña incorrectos.";
+                return false; // No envía el formulario
+            }
+        }
+    </script>
+</body>
+</html>
