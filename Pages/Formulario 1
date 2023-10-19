@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicio de Sesión</title>
+       <meta charset=utf-8 />    
+       <title>Inicio de Sesión</title>
 <!--logotipo-->
     <link rel="icon" type="image/x-icon" href="/Assets/favicon.ico">
 <!--fin del logo-->
@@ -51,6 +52,19 @@
     </style>
 </head>
 <body>
+<!-- encabezado -->
+  <header>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <img src="/Assets/logo.png" width="16%" height="16%"/>
+            <nav style="float: right;">
+                <div style="float: left;"><p><a class="nav-link" href="../index.html">Home</a></p></div>
+                <div style="float: left;"><p><a class="nav-link" href="/Pages/quienes_somos.html">Quiénes somos</a></p></div>
+                <div style="float: left;"><p><a class="nav-link" href="/Pages/cotizaciones.html">Cotizaciones</a></p></div>
+                <div style="float: left;"><p>Ayuda</p></div>
+                <button style="float: left; background-color: #A9CC39 ;  border-radius: 25px; border-width: 0;"><p style="background-color: #A9CC39; color: white">Crear cuenta</p></button>
+            </nav>
+  </header>
+<!--Fin encabezaco-->
     <div class="container">
         <div class="half form-half">
             <form id="loginForm" onsubmit="return validarFormulario()">
@@ -60,7 +74,7 @@
                 <button type="submit">Iniciar Sesión</button>
                 <p class="error-message" id="errorMessage"></p>
 
- <!--Falta crear paginna para recuperar la contrasela-->
+ <!--Falta crear pagina para recuperar la contrasela-->
                 <p class="forgot-password"><a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a></p>
 
             </form>
