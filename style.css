@@ -1,9 +1,20 @@
 /* Hoja de estilos */
 * {
-    margin: 10px;
+    margin: 0;
     padding: 10;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    background-color: rgb(244, 244, 244);
+  }
+  .header{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;  
+    flex-wrap: wrap;
   }
 .tarjeta{
   display:flex;
@@ -15,18 +26,23 @@
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
   border-radius:15px;
   font-family: sans-serif;
-  margin: 20px
+  margin: 20px;
+  padding-bottom: 10px;
 }
 .titulo{
-  font-size: 18px;
-  padding: 10px 10px 0 10px;;
+  font-size: 16px;
+  padding: 10px;
+  color: rgb(112, 112, 112);
+  font-weight: 600;
+  margin-top: 10px;
 }
 .cuerpo{
   padding: 10px;
 }
 .pie a{
   text-decoration: none;
-  color: rgb(74, 74, 74);
+  color: rgb(112, 112, 112);
+  font-size: 14px;
 }
 .pie a:after {
   position: absolute;
@@ -44,15 +60,80 @@
   margin-top: 50px;
   flex-wrap: wrap;
 }
-.btn-outline-success{
-  background-color: #87AD0A !important;
-  border-color: transparent !important;
+.button{
+  background-color: #87AD0A;
+  border-color: transparent;
+  border-radius: 4px; 
+  margin-right: 10px;
+  justify-items: center;
 }
-.btn-outline-success:hover{
-  background-color: #5c7605 !important;
-  border-color: transparent !important;
+.button:hover{
+  background-color: #a2cf10;
+  border-color: transparent;
 }
-
+.button-text{
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+}
+.footer{
+  display:flex;
+  flex-direction:column;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #87AD0A;
+  margin-top: 100px;
+}
+.nav-footer{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  background-color: transparent;
+  justify-content: center;
+}
+.nav-header{
+  display: flex;
+  align-items: center;
+}
+.nav-link{
+  text-decoration: none;
+  color: rgb(112, 112, 112);
+  background-color: transparent;
+  margin: 20px;
+}
+.nav-link:hover{
+  color: #a2cf10;
+}
+.nav-link-footer{
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  margin: 20px;
+}
+.nav-link-footer:hover{
+  color: #a2cf10;
+}
+.footer-bottom{
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.copy{
+  background-color: transparent;
+  color: white;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.contacto{
+  color: white;
+  background-color: transparent;
+}
+.contacto-link{
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
 th{
   background-color: #04AA6D;
   color: white;
@@ -93,4 +174,23 @@ table.table.cotizacion th{
   border-top: 0px!important;
   font-size: 13px;
   color: #777!important;
+}
+.quienes-somos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.container-home{
+  align-items: center; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 20%;
+  margin-top: 100px;
+}
+.staff-text{
+  color: rgb(112, 112, 112);
+  margin: 5px;
 }
