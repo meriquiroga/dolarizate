@@ -68,8 +68,9 @@
   justify-items: center;
 }
 .button:hover{
-  background-color: #a2cf10;
+  opacity: 0.8;
   border-color: transparent;
+  transform: scale(1.1);
 }
 .button-text{
   background-color: transparent;
@@ -193,4 +194,27 @@ table.table.cotizacion th{
 .staff-text{
   color: rgb(112, 112, 112);
   margin: 5px;
+}
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; 
+background-color: transparent;
+}
+.big-title{
+  color: #87AD0A; 
+  font-size: 40px; 
+  font-weight:bold; 
+  margin-top: 5px;
+  margin-bottom: 10px;
+  animation: moveToRight 2s ease-in-out;
+  animation-delay: 1000ms;
+}
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
