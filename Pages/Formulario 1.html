@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset=utf-8 />    
+       <meta name="author" content="Melanie Cedeño">
+       <meta name="viewport" content="width=device-width, initial-scañet=1">
+
+       <title>Inicio de Sesión</title>
+<!--logotipo-->
+    <link rel="icon" type="image/x-icon" href="/dolarizate-main/Assets/favicon.ico">
+
+<!--Bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!--estilo-->
+    <style>
+
+        /* Encabezado */
+        .navbar {
+            height: 100px;
+            padding: 2rem;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .navbar-collapse{
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-nav {
+            font-size: 20px
+        }
+
+        /* Tabla */
+        .form{
+            height: 500px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+        }
+
+        #login-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 50px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #login-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #login-form button {
+            width: 90%;
+            padding: 10px;
+            background: #A9CC39;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        /* Necesitas ayuda */
+        .contacto {
+            background-color: #cde08d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contacto .container {
+            min-width: 100px;
+            max-height: 200px;
+        }
+
+        .contacto .rectangulo {
+            margin-top: -5rem;
+            background-color: #A9CC39;
+            border-radius: 20px;
+            box-shadow: 0px 1px 4px 1px black;
+            justify-content: center;
+        }
+
+        .contacto .row {
+            width: 100%;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contacto button {
+            color: white;
+            font-weight: bold;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 1.25em 2em;
+            margin: 10px;
+            border-radius: 100px;
+            transition: all o.2s ease-in-out;
+        }
+        .contacto button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .contacto button i {
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.2s ease-in-out;
+        }
+        .contacto button:hover i {
+            color: black;
+        }
+
+        /*pie de pajina */
+        footer {
+            min-height: 300px;
+            background-color: #cde08d;
+
+        }
+
+        .footer-texto {
+            font-size: 1.5rem;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .iconos-redes-sociales a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            margin: 10px;
+            border:2px solid #A9CC39;
+            border-radius: 50%;
+            transition: all 0.2s ease-in;
+        }
+
+        .iconos-redes-sociales i {
+            color: black;
+            font-size: 1.5rem;
+            transition: all 0.2s ease-in;
+        }
+
+        .iconos-redes-sociales a:hover {
+            background-color: black;
+            border: #A9CC39;
+        }
+
+        .iconos-redes-sociales a:hover i {
+            color: aqua;
+        }
+
+        .derechos-de-autor {
+            font-size: 15px;
+            color: #aeaeae;
+            padding: 20px;
+        }
+
+        /* Adactiavilidad */
+        @media screen and (max-width:767px) {
+            .navbar-brand {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            #login-form {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .contacto .row {
+                font-size: 15px
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- encabezado -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="/dolarizate-main/index.html">
+                <img src="/dolarizate-main/Assets/logo.png" width="250px" alt="logotipo">
+            </a>
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/dolarizate-main/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Pages/cotizaciones.html">Cotizaciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" >Ayuda</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+<!--Formulario de inicio-->
+<section class="form seccion-clara">
+    <div class="container">
+            <form id="login-form" onsubmit="return validarFormulario()">
+                <img src="/dolarizate-main/Assets/favicon.ico" alt="Logo">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="usuario" placeholder="Usuario" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+
+             <!--Falta crear pagina para recuperar la contrasela-->
+                <p class="forgot-password"><a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a></p>
+            </form>
+    </div>
+
+<!--Validación-->
+    <script>
+        function validarFormulario() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+        }
+
+        function validarFormulario() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+
+            if (!usuario || !contrasena) {
+                alert("Por favor, complete todos los campos.");
+                return false; // Evita el envío del formulario
+            }
+
+            return true; // Permite el envío del formulario si los campos están llenos
+        }
+    </script>
+</section>
+
+<!--Ayuda o contacto-->
+     <section class="contacto seccion-oscura">
+        <div class="container">
+            <div class="container text-center rectangulo d-flex justify-content-evenly">
+                <div class="row">
+                    <div class="col-12 col-md-4 seccion-titulo">
+                    ¿Necesitas ayuda?
+                    </div>
+                    <div class="col-12 col-md-4 descripcion">
+                        Puedes comunicate con nosotros: <br>
+                        Lunes a viernes: 8.00 a las 16.00 hs. <br>
+                        Llamarnos: (+549 11) 23456-789 / 333-3333.    
+                    </div>
+                    <div class="col-12 col-md-4"> 
+                        <a href="mailto:info@dolarizate.com" target="_blank" rel="noopener no-repeat">
+                            <button type="button"> 
+                                contacto
+                                <i class="bi bi-envelope-at-fill"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--pie de pajina-->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-icono" src="/dolarizate-main/Assets/logo.png" width="200px" atl="logotipo">
+        <p class="footer-texto text-center">Contamos con profesionales especializados en inversiones</p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener no-repeat">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener no-repeat">
+                <i class="bi bi-geo-alt"></i>
+            </a>
+            <a href="mailto:info@dolarizate.com" target="_blank" rel="noopener no-repeat">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="tell:+1 123 456 789" target="_blank" rel="noopener no-repeat">
+                <i class="bi bi-telephone"></i>
+            </a>
+        </div>
+        <div class="derecho-de-autor"> Copyright 2023 &#169; | dolarizate.com </div>
+    </footer>
+
+<!--Bootstrap fin-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
