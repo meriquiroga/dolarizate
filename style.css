@@ -14,7 +14,10 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;  
-    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .menu-container{
+    display: none;
   }
 .tarjeta{
   display:flex;
@@ -120,6 +123,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  flex-wrap: wrap;
 }
 .copy{
   background-color: transparent;
@@ -191,6 +195,7 @@ table.table.cotizacion th{
   padding-left: 10%;
   padding-right: 20%;
   margin-top: 100px;
+  flex-wrap: wrap;
 }
 .container-cotizaciones{
   display: flex; 
@@ -242,4 +247,109 @@ background-color: transparent;
 }
 h2{
   color: #777;
+}
+.image-home{
+  width: 300px; 
+}
+iframe{
+  width:80%; height: 250px
+}
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 2px;
+}
+.collapsible-menu{
+  display: none;
+}
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.collapsible-menu a {
+  display:block;
+  text-decoration: none;
+}
+.collapsible-menu label {
+  margin-top: 20px;
+  text-align: end;
+  font-size: 30px;
+  color: rgb(112, 112, 112);
+  display: block;
+  cursor: pointer;
+}
+input#menu {
+  display: none;
+}
+input:checked ~ .menu-content {
+  max-height: 100%;
+}
+.icono-menu{
+  display: none;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .nav-header{
+    display: none;
+  }
+  .menu-container{
+    display:contents;
+  }
+  .collapsible-menu{
+    display: block;
+  }
+  .image-home{
+    width: 0px;
+  }
+  iframe{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .nav-link-footer{
+    margin: 8px;
+  }
+  .icono-menu{
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .logo-menu{
+    display: none;
+  }
+  .icono-menu{
+    display: block;
+  }
+  .nav-header{
+    display: none;
+  }
+  .image-home{
+    width: 0px;
+  }
+  .logo-menu{
+    width: 150px;
+  }
+  iframe{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .nav-link-footer{
+    margin: 8px;
+  }
+  .footer{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .staff-text{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }

@@ -6,14 +6,16 @@
     <link rel="shortcut icon" href="/Assets/favicon.ico"></link>
     <link rel="stylesheet" href="/style.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></head>
     <title>Dolarizate</title>
 </head>
 <body>
     <header class="header">
-        <img src="/Assets/logo.png" width="250px"/>
+        <img class="logo-menu" src="../Assets/logo.png" width="250px"/>
+        <img class="icono-menu" src="../Assets/icono.png" width="50px"/>
         <nav class="nav-header">
             <div style="float: left;">
-                <a class="nav-link" href="/index.html">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
             </div>
             <div style="float: left;">
                 <a class="nav-link" href="./quienes_somos.html">Quiénes somos</a>
@@ -24,14 +26,32 @@
             <div style="float: left;">
                 <a class="nav-link" href="./ayuda.html">Ayuda</a>
             </div>
-            <button class="button">
-                <a class="button-text" href="./Formulario_1.html" >Iniciar sesión</a>
-            </button>
-            <button class="button">
-                <a class="button-text" href="./Formulario_2.html">Crear cuenta</a>
-            </button>
+            <div class="botones-nav">
+                <button class="button">
+                    <a class="button-text" href="./Formulario_1.html" >Iniciar sesión</a>
+                </button>
+                <button class="button">
+                    <a class="button-text" href="./Formulario_2.html">Crear cuenta</a>
+                </button>
+            </div>
         </nav>
-</header>
+        <div class="menu-container">
+            <div class="collapsible-menu">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <div class="menu-content">
+                    <ul>
+                    <li><a class="nav-link" href="../index.html">Home</a></li>
+                    <li><a class="nav-link" href="./quienes_somos.html">Quiénes somos</a></li>
+                    <li><a class="nav-link" href="#">Cotizaciones</a></li>
+                    <li><a class="nav-link" href="./ayuda.html">Ayuda</a></li>
+                    <li><a class="nav-link" href="./Formulario_1.html" >Iniciar sesión</a></li>
+                    <li><a class="nav-link" href="./Formulario_2.html">Crear cuenta</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
     <div>
         
         <!-- Tabla de Cotizaciones -->
@@ -53,14 +73,12 @@
             </div>
         </div>
     </div>
-    <footer class="footer-cotizaciones">
+    <footer class="footer">
         <nav class="nav-footer">
-            <a class="nav-link-footer" href="/index.html">Home</a>
-            <a class="nav-link-footer" href="#">Quiénes somos</a>
-            <a class="nav-link-footer" href="./cotizaciones.html">Cotizaciones</a>
+            <a class="nav-link-footer" href="../index.html">Home</a>
+            <a class="nav-link-footer" href="./quienes_somos.html">Quiénes somos</a>
+            <a class="nav-link-footer" href="#">Cotizaciones</a>
             <a class="nav-link-footer" href="./ayuda.html">Ayuda</a>
-            <a class="nav-link-footer" href="./Formulario_1.html">Iniciar sesión</a>
-            <a class="nav-link-footer" href="./Formulario_2.html">Crear cuenta</a>
         </nav>
         <div class="footer-bottom">
             <div class="contacto">
@@ -73,7 +91,7 @@
             </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8461742530735!2d-58.3751433462897!3d-34.608051088189754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad2bf9bec4f%3A0x1ef5a12857750292!2sBartolom%C3%A9%20Mitre%2C%20C1036%20CABA!5e0!3m2!1ses-419!2sar!4v1698270573252!5m2!1ses-419!2sar"
-                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                 style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <p class="copy">Copyright 2023 | dolarizate.com</p>
