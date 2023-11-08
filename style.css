@@ -201,6 +201,7 @@ table.table.cotizacion th{
 }
 .container-cotizaciones{
   display: flex; 
+  min-height: 300px;  
   justify-content: center;
   padding-left: 10%;
   padding-right: 20%;
@@ -235,17 +236,6 @@ background-color: transparent;
   100% {
     transform: translateX(100px);
   }
-}
-.footer-cotizaciones{
-  display:flex;
-  flex-direction:column;
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: #87AD0A;
-  margin-top: 100px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 h2{
   color: #777;
@@ -325,7 +315,7 @@ input:checked ~ .menu-content {
     margin-right: 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 460px) {
   .logo-menu{
     display: none;
   }
