@@ -205,23 +205,15 @@
         var confirmarContrasena = document.getElementById("confirmarContrasena").value;
         var errorMessage = document.getElementById("errorMessage");
 
-    // Validación de contraseñas 
-        var contrasenaRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-        if (!contrasena.match(contrasenaRegex)) {
-            errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula y una letra minúscula.";
-            return false; // No envía el formulario
-        }
-        if (contrasena !== confirmarContrasena) {
-            errorMessage.textContent = "La contraseña y la confirmación de contraseña no coinciden.";
-            return false; // No envía el formulario
-        }
+    
     // Validación de nombre y apellido
-        if (nombre === "") {
-                errorMessage.textContent = "Por favor introducir un nombre";
+    var regex = /([A-Za-z_]{2,15})/;
+        if (!nombre.match(regex)) {
+                errorMessage.textContent = "Por favor introducir un nombre válido";
                 return false; 
         }
-        if (apellido === "") {
-                errorMessage.textContent = "Por favor introducir un apellido";
+        if (!apellido.match(regex)) {
+                errorMessage.textContent = "Por favor introducir un apellido válido";
                 return false; 
         }
     // Validación de edad (mayor de 18 años)
@@ -240,7 +232,7 @@
 
     // Validación de correo y confirmación de correo coincidentes
         if (correo === "") {
-            errorMessage.textContent = "Por favor introducir una direccion de email.";
+            errorMessage.textContent = "Por favor introducir una dirección de email válida.";
                 return false;
         }
     
@@ -249,10 +241,20 @@
             return false; // No envía el formulario
         }
 
-            // Validación de usuario
+    // Validación de usuario
         if (usuario === "") {
             errorMessage.textContent = "Por favor introducir un usuario.";
             return false;
+        }
+    // Validación de contraseñas 
+        var contrasenaRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if (!contrasena.match(contrasenaRegex)) {
+            errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula y una letra minúscula.";
+            return false; // No envía el formulario
+        }
+        if (contrasena !== confirmarContrasena) {
+            errorMessage.textContent = "La contraseña y la confirmación de contraseña no coinciden.";
+            return false; // No envía el formulario
         }
 
         errorMessage.textContent = ""; // Limpia el mensaje de error si todo es válido
