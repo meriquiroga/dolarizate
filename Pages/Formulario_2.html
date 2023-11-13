@@ -218,9 +218,11 @@
     // Validación de nombre y apellido
         if (nombre === "") {
                 errorMessage.textContent = "Por favor introducir un nombre";
+                return false; 
         }
         if (apellido === "") {
                 errorMessage.textContent = "Por favor introducir un apellido";
+                return false; 
         }
     // Validación de edad (mayor de 18 años)
         var fechaNacimientoDate = new Date(fechaNacimiento);
@@ -229,6 +231,7 @@
 
         if (fechaNacimiento === "") {
             errorMessage.textContent = "Por favor introducir una fecha de nacimiento";
+            return false; 
         }
         if (edad < 18) {
             errorMessage.textContent = "Debes ser mayor de 18 años para registrarte.";
