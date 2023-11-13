@@ -153,7 +153,7 @@
             }
 
             .form-half {
-                 width: 100%;
+                width: 100%;
             }
         }
 
@@ -171,17 +171,17 @@
         <div class="half form-half">
             <form id="registrationForm" onsubmit="return validarFormulario()">
                 <h2>Registro</h2>
-                <input type="text" id="nombre" placeholder="Nombre" required>
-                <input type="text" id="apellido" placeholder="Apellido" required>
-                <input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
-                <input type="email" id="correo" placeholder="Correo" required>
-                <input type="email" id="confirmarCorreo" placeholder="Confirmar Correo" required>
-                <input type="text" id="usuario" placeholder="Usuario" required>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="text" id="apellido" placeholder="Apellido">
+                <input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento">
+                <input type="email" id="correo" placeholder="Correo">
+                <input type="email" id="confirmarCorreo" placeholder="Confirmar Correo">
+                <input type="text" id="usuario" placeholder="Usuario">
                 <div class="toggle-password">
-                    <input type="password" id="contrasena" placeholder="Contraseña" required>
+                    <input type="password" id="contrasena" placeholder="Contraseña">
                     <input type="checkbox" id="mostrarContrasena"> Mostrar Contraseña
                 </div>
-                <input type="password" id="confirmarContrasena" placeholder="Confirmar Contraseña" required>
+                <input type="password" id="confirmarContrasena" placeholder="Confirmar Contraseña">
                 <button type="submit">Registrarse</button>
                 <p class="error-message" id="errorMessage"></p>
             </form>
@@ -216,24 +216,47 @@
             return false; // No envía el formulario
         }
       
+    // Validación de nombre y apellido
+        if (nombre === "") {
+                errorMessage.textContent = "Por favor introducir un nombre";
+        }
+        if (apellido === "") {
+                errorMessage.textContent = "Por favor introducir un apellido";
+        }
     // Validación de edad (mayor de 18 años)
         var fechaNacimientoDate = new Date(fechaNacimiento);
         var hoy = new Date();
         var edad = hoy.getFullYear() - fechaNacimientoDate.getFullYear();
 
+        if (fechaNacimiento === "") {
+            errorMessage.textContent = "Por favor introducir una fecha de nacimiento";
+        }
+        
         if (edad < 18) {
             errorMessage.textContent = "Debes ser mayor de 18 años para registrarte.";
             return false; // No envía el formulario
         }
 
     // Validación de correo y confirmación de correo coincidentes
-        if (correo !== confirmarCorreo) {
+    if (correo === "") {
+        errorMessage.textContent = "Por favor introducir una direccion de email.";
+            return false;
+    }
+    
+    if (correo !== confirmarCorreo) {
             errorMessage.textContent = "El correo y la confirmación de correo no coinciden.";
             return false; // No envía el formulario
         }
 
         errorMessage.textContent = ""; // Limpia el mensaje de error si todo es válido
         return true; // Envía el formulario si todas las validaciones pasan
+    }
+
+
+    // Validación de usuario
+    if (usuario === "") {
+        errorMessage.textContent = "Por favor introducir un usuario.";
+        return false;
     }
 
     const togglePassword = document.getElementById("mostrarContrasena");
