@@ -211,11 +211,10 @@
             errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula y una letra minúscula.";
             return false; // No envía el formulario
         }
-      if (contrasena !== confirmarContrasena) {
+        if (contrasena !== confirmarContrasena) {
             errorMessage.textContent = "La contraseña y la confirmación de contraseña no coinciden.";
             return false; // No envía el formulario
         }
-      
     // Validación de nombre y apellido
         if (nombre === "") {
                 errorMessage.textContent = "Por favor introducir un nombre";
@@ -231,32 +230,30 @@
         if (fechaNacimiento === "") {
             errorMessage.textContent = "Por favor introducir una fecha de nacimiento";
         }
-        
         if (edad < 18) {
             errorMessage.textContent = "Debes ser mayor de 18 años para registrarte.";
             return false; // No envía el formulario
         }
 
     // Validación de correo y confirmación de correo coincidentes
-    if (correo === "") {
-        errorMessage.textContent = "Por favor introducir una direccion de email.";
-            return false;
-    }
+        if (correo === "") {
+            errorMessage.textContent = "Por favor introducir una direccion de email.";
+                return false;
+        }
     
-    if (correo !== confirmarCorreo) {
+        if (correo !== confirmarCorreo) {
             errorMessage.textContent = "El correo y la confirmación de correo no coinciden.";
             return false; // No envía el formulario
         }
 
+            // Validación de usuario
+        if (usuario === "") {
+            errorMessage.textContent = "Por favor introducir un usuario.";
+            return false;
+        }
+
         errorMessage.textContent = ""; // Limpia el mensaje de error si todo es válido
         return true; // Envía el formulario si todas las validaciones pasan
-    }
-
-
-    // Validación de usuario
-    if (usuario === "") {
-        errorMessage.textContent = "Por favor introducir un usuario.";
-        return false;
     }
 
     const togglePassword = document.getElementById("mostrarContrasena");
